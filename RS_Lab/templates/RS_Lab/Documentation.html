@@ -1,0 +1,106 @@
+{% extends "RS_Lab/Base_Main.html" %}
+{% load plotly_dash %}
+{% load static %}
+{% block content%}
+<div style="background-color: white; padding: 10px;display: flex; flex-direction: column; align-items: left;">
+   <br>
+   <div class="container">
+      <header class="layout-0">
+         <h1 class=" underline" style="padding-bottom: 10px; border-bottom: 2px solid #1f324b">
+            <span>Documentation</span>
+         </h1>
+      </header>
+      <br>
+      <h4 style="padding-bottom: 5px;">Scale free network:</h4>
+      <ul>
+         <li>Scale free network based on Power- Law distribution</li>
+         <li>If distribution in straight line on log-log plot so it suggests a power law distribution and consider as scale free network</li>
+         <li>Plot a degree distribution on a logarithmic scale</li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">Small world network:</h4>
+      <ul>
+         <li>Having property of high clustering and short average path length</li>
+         <li>Nodes tends to be highly interconnected</li>
+         <li>It takes only few steps to reach from one node to another in the network</li>
+         <li>
+            Calculate average clustering coefficient and average shortest path length
+            <ul>
+               <li>Average clustering coefficient: it measures how tightly connected a node with its neighbor. High clustering tells presence of clusters</li>
+               <li>Average shortest path length: it measures how easily info spread through network. Shortest average path length tells small world network</li>
+            </ul>
+         </li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">Homophily network:</h4>
+      <ul>
+         <li>This is a special type of network in which nodes make bonds with similar other nodes which results in similar properties among neighbors.</li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">Interpretation:</h4>
+      <ul>
+         <li>Degree distribution follows power law on log-log plot, network shows few nodes with higher degree and many nodes with low degree, it will be <b>SCALE FREE NETWORK</b></li>
+         <li>High clustering and having shortest average path length, it will be <b>SMALL WORLD NETWORK</b></li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">ASSORTATIVITY:</h4>
+      <ul>
+         <li>Assortativity is used to measure the preference of nodes inside the network to connect to nodes with similar or dissimilar attributes</li>
+         <li>Helps to understand the HOMOPHILY or HETEROPHILY in a network.</li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">K-Core:</h4>
+      <ul>
+         <li>K-core is a concept that shows the connectivity in a network</li>
+         <li>A k-core is maximum subnetworks in which all nodes have degree of at least k</li>
+         <li>Higher the value of k-core output represents more central and well-connected regions of the networks.</li>
+         <li>You can replace the edges with your own network's structure and choose different k values to observe the different k-cores of the graph.</li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">DENSITY:</h4>
+      <ul>
+         <li>Density measures the ratio of the actual number of edges in a network to the total possible number of edges in that network.</li>
+         <li>It gives an indication of how well-connected the network is</li>
+         <li>The density value will be between 0 and 1</li>
+         <li>A density of 1 would mean that all possible edges are present,while a density of 0 would indicate a completely disconnected graph</li>
+      </ul>
+      <h4 style="padding-bottom: 5px;">Concepts to Analyze Social Networks:</h4>
+      <ul>
+         <h4>Closeness:
+         </h4>
+         <ul>
+            <li>The level of closeness to all nodes in the network and quantifies how fast information will spread to other nodes</li>
+            <li>The higher the closeness centrality value of a node, the closed it is to other nodes in terms of shortest paths</li>
+         </ul>
+      </ul>
+        <ul>
+         <h4>Betweenness:
+         </h4>
+         <ul>
+            <li>The amount of short path going through the node and measures the extent to which a node lies on the shortest path between nodes in network</li>
+            <li>Nodes with higher betweenness centrality values are important for maintaining communication and information flow in the network</li>
+         </ul>
+      </ul>
+       <ul>
+         <h4>Degree:
+         </h4>
+         <ul>
+            <li>The amount of neighbors of the node</li>
+
+         </ul>
+      </ul>
+       <ul>
+         <h4>Eigen Vector:
+         </h4>
+         <ul>
+            <li>Eigen vector centrality measures the node’s importance in a network based on centrality of its neighbors</li>
+             <li>Higher Eigenvector centrality values of nodes shows importance of node in terms of spreading influence through the network</li>
+         </ul>
+      </ul>
+       <ul>
+         <h4>Triangles in Network:
+         </h4>
+         <ul>
+            <li>The maximum number of triangles is calculated by adding the number of actual triangles to the number of open triads</li>
+             <li>This value represents the maximum number of triangles that could potentially exist in the network</li>
+         </ul>
+      </ul>
+      <br><br>
+   </div>
+   <br>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "RS_Lab/Base_Main.html" %}
+{% load plotly_dash %}
+{% load static %}
+
+{% block content%}
+<div style="background-color: white; padding: 10px;display: flex; flex-direction: column; align-items: left;">
+{#     <br>#}
+{#    <div class="container">#}
+{#        <header class="layout-0">#}
+{#            <h1 class=" underline">#}
+{#            <span>Koblenz University Research Lab Project</span>#}
+{#            </h1>#}
+{#        </header>#}
+{#        <hr>#}
+{#        <br>#}
+{##}
+{#        <p><b>This WebSite is developed by University students as Research Lab for Social Network Analysis</b></p>#}
+{#        <br><br>#}
+{##}
+{#    </div>#}
+{##}
+{#<br>#}
+<div class="container fluid">
+    {% plotly_app name='SNA_Main_APP' ratio=3.65 %}
+</div>
+
+</div>
+{% endblock %}
